@@ -12,6 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHouse"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuthCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdressActivity"
+            android:exported="false" />
         <activity
             android:name=".SignInActivity"
             android:exported="false"

@@ -15,56 +15,74 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
             app:srcCompat="@drawable/logo" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="Умный дом"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:shadowColor="@color/dark_blue"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="10"/>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:background="@color/semi_transparent_white"
+            app:cardBackgroundColor="@color/semi_transparent_dark_blue"
+            app:cardCornerRadius="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/nameInputLayout"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:textColorHint="@color/choco_red"
-            app:errorEnabled="true">
+            android:textColorHint="@color/white"
+            app:errorEnabled="true"
+            android:shadowColor="@color/dark_blue"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="10">
 
             <EditText
                 android:id="@+id/Name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColorHint="@color/blue"
+                android:textColorHint="@color/white"
                 android:hint="Имя пользователя"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:shadowColor="@color/dark_blue"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout3"
+            android:id="@+id/emailInputLayout"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:textColorHint="@color/blue"
+            android:textColorHint="@color/white"
             app:errorEnabled="true">
 
             <EditText
@@ -72,49 +90,67 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Электронная почта"
-                android:textColorHint="@color/blue"
+                android:textColorHint="@color/white"
                 android:inputType="textEmailAddress"
                 android:textSize="20sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout4"
+            android:id="@+id/passwordInputLayout"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:textColorHint="@color/white"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
+
             <EditText
                 android:id="@+id/Password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/blue"
                 android:hint="Пароль"
+                android:textColorHint="@color/white"
                 android:digits="0123456789.,-"
                 android:inputType="numberDecimal"
                 android:textSize="20sp"/>
         </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/choco_red"
+            app:cardCornerRadius="20dp">
 
         <Button
-            android:id="@+id/But2"
+            android:id="@+id/singUpBut"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#984e4f"
+            android:background="@color/choco_red"
             android:text="Регистрация"
             android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/dark_blue"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp">
         <Button
+            android:id="@+id/signInBut"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:backgroundTint="@color/dark_blue"
-            android:onClick="Login"
+            android:background="@color/dark_blue"
             android:text="Войти"
             android:textColor="@color/white"
             android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
 </LinearLayout>
