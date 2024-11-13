@@ -20,9 +20,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Добавить адрес"
+            android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textSize="25sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -32,28 +32,30 @@
         android:orientation="vertical">
 
         <TextView
-                android:id="@+id/user_name_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Добавьте адрес своего дома в формате\nг. Название города, ул. Название улицы,\nд. Номер дома"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            android:id="@+id/user_name_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Добавьте адрес своего дома в формате\nг. Название города, ул. Название улицы,\nд. Номер дома"
+            android:textSize="16sp"/>
 
         <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/adressInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="62dp"
-                app:boxCornerRadius="10dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                app:errorEnabled="true">
+            android:id="@+id/adressInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            app:boxCornerRadius="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat"
+            app:errorEnabled="true">
 
                 <EditText
                     android:id="@+id/Address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
                     android:hint="Адрес"
                     android:textSize="15sp"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -72,8 +74,9 @@
             android:layout_marginBottom="100dp"
             android:layout_gravity="bottom|center"
             android:backgroundTint="@color/blue"
+            android:fontFamily="@font/montserrat_bold"
             android:text="Сохранить"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
 </RelativeLayout>

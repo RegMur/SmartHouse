@@ -26,9 +26,9 @@
             android:gravity="center"
             android:text="Умный дом"
             android:textSize="25sp"
-            android:textStyle="bold"
             android:textColor="@color/white"
             android:shadowColor="@color/dark_blue"
+            android:fontFamily="@font/montserrat_bold"
             android:shadowDx="2"
             android:shadowDy="2"
             android:shadowRadius="10"/>
@@ -57,22 +57,16 @@
             android:layout_marginEnd="20dp"
             android:textColorHint="@color/white"
             app:errorEnabled="true"
-            android:shadowColor="@color/dark_blue"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            android:shadowRadius="10">
+            android:fontFamily="@font/montserrat">
 
             <EditText
                 android:id="@+id/Name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/white"
+                android:fontFamily="@font/montserrat"
                 android:hint="Имя пользователя"
-                android:textSize="20sp"
-                android:shadowColor="@color/dark_blue"
-                android:shadowDx="2"
-                android:shadowDy="2"
-                android:shadowRadius="10"/>
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -82,6 +76,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat"
             android:textColorHint="@color/white"
             app:errorEnabled="true">
 
@@ -90,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Электронная почта"
+                android:fontFamily="@font/montserrat"
                 android:textColorHint="@color/white"
                 android:inputType="textEmailAddress"
                 android:textSize="20sp"/>
@@ -102,6 +98,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat"
             android:textColorHint="@color/white"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
@@ -111,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Пароль"
+                android:fontFamily="@font/montserrat"
                 android:textColorHint="@color/white"
                 android:digits="0123456789.,-"
                 android:inputType="numberDecimal"
@@ -130,9 +128,10 @@
             android:id="@+id/singUpBut"
             android:layout_width="300dp"
             android:layout_height="60dp"
+            android:fontFamily="@font/montserrat_bold"
             android:background="@color/choco_red"
             android:text="Регистрация"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -147,8 +146,9 @@
             android:layout_height="60dp"
             android:background="@color/dark_blue"
             android:text="Войти"
+            android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

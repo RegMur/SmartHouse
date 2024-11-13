@@ -7,38 +7,47 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ProfileActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/dark_blue"
-        android:gravity="top|center"
-        android:orientation="vertical"
-        android:padding="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/dark_blue"
+            android:gravity="top">
+
+        <!-- Кнопка назад -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/back_button"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
 
             <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Профиль"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Профиль"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp" />
 
             <ImageView
-                android:id="@+id/camera"
+                android:id="@+id/profilePhoto"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@color/white"
-                android:contentDescription=" "
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/backButton"
+                android:layout_marginTop="10dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/son" />
-    </LinearLayout>
+                android:src="@drawable/profile_photo" />
+</RelativeLayout>
 
-    <LinearLayout
+<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -49,7 +58,6 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             app:boxCornerRadius="10dp"
             app:errorEnabled="true">
@@ -57,7 +65,7 @@
             <EditText
                 android:id="@+id/userName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="44dp"
                 android:focusedSearchResultHighlightColor="@color/grey"
                 android:hint="Имя пользователя"
                 android:textSize="15sp" />
@@ -74,9 +82,9 @@
             app:errorEnabled="true">
 
             <EditText
-                android:id="@+id/userFathername"
+                android:id="@+id/userEmail"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="44dp"
                 android:hint="Электронная почта"
                 android:textSize="15sp"
                 android:inputType="textEmailAddress" />
@@ -94,9 +102,9 @@
             app:errorEnabled="true">
 
             <EditText
-                android:id="@+id/userSurname"
+                android:id="@+id/userAdress"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="44dp"
                 android:hint="Адрес"
                 android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -112,9 +120,9 @@
             app:errorEnabled="true">
 
             <EditText
-                android:id="@+id/userDateOfBirth"
+                android:id="@+id/userPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="44dp"
                 android:hint="Пароль"
                 android:textSize="15sp"
                 android:digits="0123456789.,-"
@@ -136,7 +144,7 @@
             android:id="@+id/profileExitBut"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="Выйти"
             android:textColor="@color/white"
             android:textSize="17sp"

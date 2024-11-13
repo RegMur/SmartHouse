@@ -24,9 +24,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold"
             android:text="Умный дом"
             android:textSize="25sp"
-            android:textStyle="bold"
             android:shadowColor="@color/dark_blue"
             android:shadowDx="2"
             android:shadowDy="2"
@@ -54,7 +54,9 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montserrat"
                 android:textColorHint="@color/white"
+                android:textSize="16sp"
                 app:errorEnabled="true">
 
                 <EditText
@@ -62,6 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Электронная почта"
+                    android:fontFamily="@font/montserrat"
                     android:textColorHint="@color/white"
                     android:inputType="textEmailAddress"
                     android:textSize="20sp"/>
@@ -75,6 +78,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat"
                 android:textColorHint="@color/white"
                 app:errorEnabled="true"
                 app:passwordToggleEnabled="true">
@@ -84,6 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
+                    android:fontFamily="@font/montserrat"
                     android:hint="Пароль"
                     android:digits="0123456789.,-"
                     android:inputType="numberDecimal"
@@ -104,7 +109,8 @@
             android:layout_height="60dp"
             android:background="@color/choco_red"
             android:text="Войти"
-            android:textSize="20sp" />
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -119,8 +125,9 @@
             android:layout_height="60dp"
             android:background="@color/dark_blue"
             android:text="Регистрация"
+            android:fontFamily="@font/montserrat_bold"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>
