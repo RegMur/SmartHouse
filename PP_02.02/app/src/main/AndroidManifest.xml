@@ -12,7 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHouse"
         tools:targetApi="31">
-
+        <activity
+            android:name=".listRoom"
+            android:exported="false" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateCodeActivity"
+            android:exported="false"
+            android:theme="@style/StreetTheme" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
@@ -21,23 +39,19 @@
             android:exported="false"
             android:theme="@style/StreetTheme" />
         <activity
-            android:name=".CreateCodeActivity"
-            android:exported="false"
-            android:theme="@style/StreetTheme" />
-        <activity
-            android:name=".AdressActivity"
+            android:name=".AddressActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
             android:exported="false"
             android:theme="@style/StreetTheme" />
         <activity
-            android:name=".SignUpActivity"
-            android:exported="false"
-            android:theme="@style/StreetTheme" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true"
+            android:theme="@style/StreetTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/adress"
+    android:id="@+id/address"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdressActivity">
+    tools:context=".AddressActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +44,10 @@
             android:id="@+id/adressInputLayout"
             android:layout_width="match_parent"
             android:layout_height="62dp"
-            app:boxCornerRadius="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"

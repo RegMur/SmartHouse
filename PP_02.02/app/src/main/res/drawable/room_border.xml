@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Устанавливаем прозрачный фон -->
+    <solid android:color="@android:color/transparent" />
+    <!-- Определяем границу -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/blue" />  <!-- Ширина и цвет границы -->
+    <!-- Устанавливаем радиус для закругленных углов, если нужно -->
+    <corners android:radius="20dp" />
+</shape>

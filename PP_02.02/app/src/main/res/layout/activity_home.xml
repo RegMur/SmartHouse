@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+        <!-- Верхняя панель с заголовком и иконкой настроек -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_blue"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/homeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Твой дом"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_bold" />
+
+            <TextView
+                android:id="@+id/homeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeTitle"
+                android:text=""
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/settingsIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/settings"
+                android:contentDescription="Settings"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        android:contentDescription=" "/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+        <!-- Табуляция с кнопками: Комнаты, Устройства, Пользователи -->
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Комнаты"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Устройства"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пользователи"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+        </LinearLayout>-->
+
+       <!-- &lt;!&ndash; Список комнат &ndash;&gt;
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">-->
+
+            <!--&lt;!&ndash; Комната 1 &ndash;&gt;
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/room_border"
+                android:padding="16dp"
+                android:marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/livingRoomIcon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sofa"
+                    android:contentDescription="Living Room"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/livingRoomText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/livingRoomIcon"
+                    android:layout_marginStart="16dp"
+                    android:text="Гостиная"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            &lt;!&ndash; Повторите RelativeLayout для каждой комнаты аналогично &ndash;&gt;
+        </LinearLayout>-->
+
+        <!-- Кнопка добавления комнаты -->
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="end"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_button"
+            android:background="@null"
+            android:contentDescription="Добавить комнату"
+            android:layout_margin="16dp" />
+
+   <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:background="@null"
+        android:src="@drawable/add_button"
+        android:contentDescription="Добавить комнату"/>-->
+    </LinearLayout>
+
+</LinearLayout>
