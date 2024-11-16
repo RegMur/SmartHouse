@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="pinDot">
+    <style name="pinDotUnfill">
         <item name="android:layout_width">16dp</item>
         <item name="android:layout_height">16dp</item>
         <item name="android:layout_margin">4dp</item>
         <item name="android:background">@drawable/circle_unfilled</item>
+    </style>
+
+    <style name="pinDotFill">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/circle_filled</item>
     </style>
 </resources>

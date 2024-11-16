@@ -13,10 +13,13 @@
         android:theme="@style/Theme.SmartHouse"
         tools:targetApi="31">
         <activity
-            android:name=".listRoom"
+            android:name=".AddUserActivity"
             android:exported="false" />
         <activity
-            android:name=".UserActivity"
+            android:name=".AddRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".listRoom"
             android:exported="false" />
         <activity
             android:name=".DeviceActivity"

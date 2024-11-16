@@ -37,19 +37,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/semi_transparent_dark_blue"
-            app:cardCornerRadius="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp">
+            app:cardCornerRadius="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nameInputLayout"
+            android:id="@+id/nameSUInputLayout"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_marginStart="20dp"
@@ -60,7 +61,7 @@
             android:fontFamily="@font/montserrat">
 
             <EditText
-                android:id="@+id/Name"
+                android:id="@+id/nameSU"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/white"
@@ -70,7 +71,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailInputLayout"
+            android:id="@+id/emailSUInputLayout"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_marginStart="20dp"
@@ -81,7 +82,7 @@
             app:errorEnabled="true">
 
             <EditText
-                android:id="@+id/Email"
+                android:id="@+id/emailSU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Электронная почта"
@@ -92,7 +93,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordInputLayout"
+            android:id="@+id/passwordSUInputLayout"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_marginStart="20dp"
@@ -104,7 +105,7 @@
             app:passwordToggleEnabled="true">
 
             <EditText
-                android:id="@+id/Password"
+                android:id="@+id/passwordSU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Пароль"
