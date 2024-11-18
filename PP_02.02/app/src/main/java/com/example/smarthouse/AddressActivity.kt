@@ -22,6 +22,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+
+
 class AddressActivity : AppCompatActivity() {
 
     private lateinit var addressInputLayout: TextInputLayout
@@ -45,7 +47,7 @@ class AddressActivity : AppCompatActivity() {
         setContentView(R.layout.activity_address)
         lifecycleScope.launch{
             //декодирование дата класса
-            val city = supabase.from("home").select().decodeSingle<home>()
+            val city = supabase.from("user").select().decodeSingle<user>()
             Log.e("!!!1", city.address)
         }
        /* ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.address)) { v, insets ->

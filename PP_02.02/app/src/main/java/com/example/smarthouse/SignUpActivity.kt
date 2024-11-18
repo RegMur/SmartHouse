@@ -17,11 +17,16 @@ import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.gotrue.Auth
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.from
-import io.supabase.android.SupabaseClient
-import io.supabase.android.SupabaseConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+
+data class user(
+    val user_id: Int,
+    val username: String,
+    val profile_image: Int,
+    val address: String
+)
 
 class SignUpActivity : AppCompatActivity() {
 

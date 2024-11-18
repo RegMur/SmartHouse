@@ -29,6 +29,13 @@ data class room_types(
     val icon : Int
 )
 
+data class user(
+    val user_id: Int,
+    val username: String,
+    val profile_image: Int,
+    val address: String
+)
+
 
 class SignInActivity : AppCompatActivity() {
 
