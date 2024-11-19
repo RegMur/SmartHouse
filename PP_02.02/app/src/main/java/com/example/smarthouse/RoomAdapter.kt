@@ -7,9 +7,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RoomAdapter(private val rooms: List<Room>) : RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
+class RoomAdapter(private var rooms: List<room>) : RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
+
+    class RoomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val roomName: TextView = itemView.findViewById(R.id.livingRoomText)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_room, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_room, parent, false)
         return RoomViewHolder(view)
     }
 
@@ -18,16 +23,16 @@ class RoomAdapter(private val rooms: List<Room>) : RecyclerView.Adapter<RoomAdap
         holder.roomName.text = room.name
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, DeviceActivity::class.java)
-            intent.putExtra("ROOM_ID", room.roomId)
+            val intent = Intent(holder.itemView.context, InDeviceActivity::class.java)
+            intent.putExtra("ROOM_ID", room.room_id)
             holder.itemView.context.startActivity(intent)
         }
     }
 
-    override fun getItemCount(): Int = rooms.size
+    override fun getItemCount() = rooms.size
 
-    class RoomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val roomName: TextView = view.findViewById(R.id.roomName)
+    fun updateData(newRooms: List<room>) {
+        rooms = newRooms
+        notifyDataSetChanged()
     }
-
 }

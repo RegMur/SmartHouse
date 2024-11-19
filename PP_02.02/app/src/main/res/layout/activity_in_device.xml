@@ -5,6 +5,6 @@
     android:id="@+id/device"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DeviceActivity">
+    tools:context=".InDeviceActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

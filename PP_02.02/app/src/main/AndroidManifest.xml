@@ -13,19 +13,16 @@
         android:theme="@style/Theme.SmartHouse"
         tools:targetApi="31">
         <activity
+            android:name=".AddDeviceActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddUserActivity"
             android:exported="false" />
         <activity
             android:name=".AddRoomActivity"
             android:exported="false" />
         <activity
-            android:name=".listRoom"
-            android:exported="false" />
-        <activity
-            android:name=".DeviceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RoomActivity"
+            android:name=".InDeviceActivity"
             android:exported="false" />
         <activity
             android:name=".CreateCodeActivity"
@@ -48,19 +45,19 @@
             android:name=".SignInActivity"
             android:exported="false"
             android:theme="@style/StreetTheme" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SignUpActivity"
             android:exported="false"
-            android:theme="@style/StreetTheme"/>
-            <!--<intent-filter>
+            android:theme="@style/StreetTheme" />
+        <!--
+<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>-->
+        </activity>
+        -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"

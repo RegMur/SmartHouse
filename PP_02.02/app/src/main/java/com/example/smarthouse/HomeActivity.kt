@@ -8,47 +8,51 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
+import io.github.jan.supabase.createSupabaseClient
+import io.github.jan.supabase.postgrest.postgrest
+import kotlinx.coroutines.launch
 
 class HomeActivity : AppCompatActivity() {
-    private lateinit var homeAddress: TextView
+    private lateinit var address: TextView
     private lateinit var settingsIcon: ImageButton
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
         /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.home)) { v, insets ->*/
             // Инициализация UI компонентов
-            homeAddress = findViewById(R.id.homeAddress)
             settingsIcon = findViewById(R.id.settingsIcon)
             tabLayout = findViewById(R.id.tabLayout)
             viewPager = findViewById(R.id.viewPager)
 
-            // Установка заголовка и адреса из базы данных Supabase
-            loadUserData()
-
-            // Настройка ViewPager и вкладок
-            setupViewPager()
+            viewPager.adapter = HomeViewPagerAdapter(supportFragmentManager)
+            tabLayout.setupWithViewPager(viewPager)
 
             // Обработчик нажатия на кнопку настроек
             settingsIcon.setOnClickListener {
                 val intent = Intent(this, ProfileActivity::class.java)
                 startActivity(intent)
+
+                // Установка заголовка и адреса из базы данных Supabase
+                loadUserData()
             }
         }
 
         private fun loadUserData() {
-            // Пример получения данных пользователя из Supabase
-            SupabaseClient.getInstance().fetchUser { user ->
-                homeAddress.text = user.homeAddress
+            lifecycleScope.launch {
+                val user = supabase.postgrest["user"].select().decodeSingle<user>()
+                findViewById<TextView>(R.id.address).text = user.address
             }
         }
 
-        private fun setupViewPager() {
+        /*private fun setupViewPager() {
             val adapter = HomeViewPagerAdapter(supportFragmentManager)
             adapter.addFragment(RoomFragment(), "Комнаты")
             adapter.addFragment(DeviceFragment(), "Устройства")
@@ -56,5 +60,5 @@ class HomeActivity : AppCompatActivity() {
 
             viewPager.adapter = adapter
             tabLayout.setupWithViewPager(viewPager)
-        }
+        }*/
     }

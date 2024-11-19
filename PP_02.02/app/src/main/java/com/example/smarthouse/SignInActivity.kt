@@ -23,20 +23,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-data class room_types(
-    val room_id : Int,
-    val type : String,
-    val icon : Int
-)
-
-data class user(
-    val user_id: Int,
-    val username: String,
-    val profile_image: Int,
-    val address: String
-)
-
-
 class SignInActivity : AppCompatActivity() {
 
     private lateinit var emailInputLayout: TextInputLayout
@@ -48,13 +34,6 @@ class SignInActivity : AppCompatActivity() {
 
     private val emailPattern = Regex("^[a-z0-9]+@[a-z0-9]+\\.[a-z]{2,}$")
 
-    val supabase = createSupabaseClient(
-        supabaseUrl = "https://dvqmltvcctihmjunrjlm.supabase.co",
-        supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR2cW1sdHZjY3RpaG1qdW5yamxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE0ODU1ODEsImV4cCI6MjA0NzA2MTU4MX0.uEgEwhiwHj-VglPp7Emz_dnlsXHaW6E_DcUfJdi9RPI"
-    ) {
-        install(Postgrest)
-        install(Auth)
-    }
 /*    val supabaseUrl = "https://dvqmltvcctihmjunrjlm.supabase.co"
     val supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR2cW1sdHZjY3RpaG1qdW5yamxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzE0ODU1ODEsImV4cCI6MjA0NzA2MTU4MX0.uEgEwhiwHj-VglPp7Emz_dnlsXHaW6E_DcUfJdi9RPI"
 

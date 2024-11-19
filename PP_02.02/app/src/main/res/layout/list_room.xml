@@ -5,10 +5,9 @@
     android:id="@+id/listRoom"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".listRoom">
+    android:orientation="vertical">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/room_border"
@@ -27,22 +26,26 @@
             android:id="@+id/livingRoomText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/livingRoomIcon"
-            android:layout_centerVertical="true"
             android:layout_marginStart="70dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Гостиная"
             android:textColor="@color/blue"
             android:textSize="25sp" />
-    </RelativeLayout>
 
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="bottom|end"
-        android:scaleType="fitXY"
-        android:src="@drawable/add_button"
-        android:background="@null"
-        android:contentDescription="Добавить комнату"
-        android:layout_margin="20dp" />
+    </LinearLayout>
+
+  <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|end"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:background="@null"
+            android:contentDescription="Добавить комнату"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_button" />-->
 </LinearLayout>
