@@ -43,5 +43,12 @@ data class device(
     val identifier: Int
 )
 
+/*data class dishwasher (
+val identifier : Int,
+val device_id : Int,
+val auto_start : DateTime,
+val water_usage : )*/
+
+
 
 
