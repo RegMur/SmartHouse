@@ -49,15 +49,14 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="false"
-            android:theme="@style/StreetTheme" />
-        <!--
-<intent-filter>
+            android:theme="@style/StreetTheme" /><!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        -->
+        </activity>-->
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"

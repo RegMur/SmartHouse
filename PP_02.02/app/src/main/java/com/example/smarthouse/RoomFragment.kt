@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
 
 class RoomFragment : Fragment() {
 
-    private lateinit var roomAdapter: RoomAdapter
+   /* private lateinit var roomAdapter: RoomAdapter
     private lateinit var roomRecyclerView: RecyclerView
 
     override fun onCreateView(
@@ -46,5 +46,5 @@ class RoomFragment : Fragment() {
             val rooms = supabase.postgrest["room"].select().decodeList<room>()
             roomAdapter.updateData(rooms)
         }
-    }
+    }*/
 }

@@ -12,5 +12,4 @@ class HomeViewPagerAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm, BEHA
         override fun getItem(position: Int) = fragmentList[position]
 
         override fun getPageTitle(position: Int) = fragmentTitleList[position]
-    }
 }

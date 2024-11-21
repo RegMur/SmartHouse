@@ -15,7 +15,7 @@
         android:padding="40dp">
 
         <ImageView
-            android:id="@+id/livingRoomIcon"
+            android:id="@+id/roomIcon"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/sofa"
@@ -23,7 +23,7 @@
             android:scaleType="fitXY"/>
 
         <TextView
-            android:id="@+id/livingRoomText"
+            android:id="@+id/roomText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"

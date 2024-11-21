@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 
 class AddDeviceActivity : AppCompatActivity() {
 
-    private lateinit var deviceName: EditText
+    /*private lateinit var deviceName: EditText
     private lateinit var deviceId: EditText
     private lateinit var roomSpinner: Spinner
     private lateinit var saveButton: Button
@@ -32,7 +32,7 @@ class AddDeviceActivity : AppCompatActivity() {
         roomSpinner = findViewById(R.id.room_spinner)
         saveButton = findViewById(R.id.save_button)
 
-        supabaseClient = createSupabaseClient(/* Ваши ключи */)
+        supabaseClient = createSupabaseClient(*//* Ваши ключи *//*)
 
         setupRoomSpinner()
         setupDeviceTypeButtons()
@@ -84,5 +84,5 @@ class AddDeviceActivity : AppCompatActivity() {
                 finish()
             }
         }
-    }
+    }*/
 }

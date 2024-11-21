@@ -42,7 +42,7 @@ class AddressActivity : AppCompatActivity() {
             val address = addressEditText.text.toString().trim()
 
             if (validateAddress(address)) {
-                saveAddressToSupabase(address)
+                //saveAddressToSupabase(address)
             } else {
                 Toast.makeText(this, "Адрес не соответствует формату!", Toast.LENGTH_SHORT).show()
             }
@@ -56,7 +56,7 @@ class AddressActivity : AppCompatActivity() {
     }
 
     // Функция сохранения адреса в базу данных Supabase
-    private fun saveAddressToSupabase(address: String) {
+    /*private fun saveAddressToSupabase(address: String) {
         lifecycleScope.launch {
             try {
                 // Получение текущего пользователя
@@ -88,5 +88,5 @@ class AddressActivity : AppCompatActivity() {
                 Toast.makeText(this@AddressActivity, "Ошибка: ${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
-    }
+    }*/
 }

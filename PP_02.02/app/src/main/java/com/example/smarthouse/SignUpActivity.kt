@@ -26,9 +26,6 @@ import kotlinx.coroutines.launch
 
 class SignUpActivity : AppCompatActivity() {
 
-    private lateinit var nameInputLayout: TextInputLayout
-    private lateinit var emailInputLayout: TextInputLayout
-    private lateinit var passwordInputLayout: TextInputLayout
     private lateinit var nameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
@@ -59,7 +56,7 @@ class SignUpActivity : AppCompatActivity() {
             val passwordProfile = passwordEditText.text.toString().trim()
 
             if (validateInput(nameProfile, emailProfile, passwordProfile)) {
-                registerUser(nameProfile, emailProfile, passwordProfile)
+               // registerUser(nameProfile, emailProfile, passwordProfile)
             }
         }
 
