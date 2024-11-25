@@ -42,7 +42,6 @@ dependencies {
     implementation ("io.github.jan-tennert.supabase:postgrest-kt")
     implementation ("io.github.jan-tennert.supabase:realtime-kt")
     implementation ("io.ktor:ktor-client-cio:2.3.12")
-    implementation("io.github.jan-tennert.supabase:auth-kt:1.8.10")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     implementation(libs.androidx.core.ktx)
