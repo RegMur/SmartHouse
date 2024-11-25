@@ -5,6 +5,7 @@
     android:id="@+id/sign_in"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_blue"
     tools:context=".SignInActivity">
 
     <LinearLayout
@@ -35,7 +36,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/semi_transparent_dark_blue"
+            app:cardBackgroundColor="@color/semi_transparent_blue"
             app:cardCornerRadius="50dp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="30dp"
@@ -56,7 +57,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/montserrat"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/dark_blue"
                 android:textSize="16sp"
                 app:errorEnabled="true">
 
@@ -66,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Электронная почта"
                     android:fontFamily="@font/montserrat"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/dark_blue"
                     android:inputType="textEmailAddress"
                     android:textSize="20sp"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +81,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/montserrat"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/dark_blue"
                 app:errorEnabled="true"
                 app:passwordToggleEnabled="true">
 
@@ -88,7 +89,7 @@
                     android:id="@+id/passwordSI"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="@color/dark_blue"
                     android:fontFamily="@font/montserrat"
                     android:hint="Пароль"
                     android:digits="0123456789.,-"

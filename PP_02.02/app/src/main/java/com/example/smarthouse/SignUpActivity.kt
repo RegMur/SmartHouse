@@ -1,5 +1,6 @@
 package com.example.smarthouse
 
+import android.R.attr.value
 import android.content.Intent
 import android.widget.Button
 import android.widget.EditText
@@ -59,7 +60,7 @@ class SignUpActivity : AppCompatActivity() {
             val passwordProfile = passwordEditText.text.toString().trim()
 
             if (validateInput(nameProfile, emailProfile, passwordProfile)) {
-               // registerUser(nameProfile, emailProfile, passwordProfile)
+                registerUser(nameProfile, emailProfile, passwordProfile)
             }
         }
 
@@ -95,37 +96,36 @@ class SignUpActivity : AppCompatActivity() {
         return isValid
     }
 
-    private fun registerUser(email_: String, password_: String) {
+    private fun registerUser(nameProfile: String, emailProfile: String, passwordProfile: String) {
         lifecycleScope.launch {
             try {
                 // Вход пользователя в Supabase
-                supabase.auth.signUpWith(Email) {
-                    email = email_
-                    password = password_
+                val response = supabase.auth.signUpWith(Email) {
+                    email = emailProfile
+                    password = passwordProfile
                 }
                 val session = supabase.auth.currentSessionOrNull()
-                val userid = session?.user?.id
-                Log.e("USER!", userid.toString())
+                val user = session?.user?.id
 
-                /* val session = userid.auth.signUpWith(email, password)
-                             if (session.user != null) {
-                                  // Если регистрация успешна, добавляем дополнительную информацию в таблицу `user`
-                                  userid.postgrest["user"].insert(
-                                      user(
-                                          user_id = response.userid.id,
-                                          username = name,
-                                          profile_image = null,
-                                          address = null
-                                      )
-                                  )*/
+                if (session != null && user != null) {
+                    // Если регистрация успешна, добавляем дополнительную информацию в таблицу `user`
+                    supabase
+                        .from("user")
+                        /*.insert {
+                            obj("user_id") { value = user.id }
+                            obj("username") { value = nameProfile }
+                            obj("profile_image") { value = null }
+                            obj("address") { value = null }
+                        }*/
 
-                Toast.makeText(this@SignUpActivity, "Регистрация успешна!", Toast.LENGTH_SHORT)
-                    .show()
+                    Toast.makeText(this@SignUpActivity, "Регистрация успешна!", Toast.LENGTH_SHORT).show()
 
-                // Переход на экран создания PIN-кода
-                startActivity(Intent(this@SignUpActivity, CreateCodeActivity::class.java))
-                finish()
-
+                    // Переход на экран создания PIN-кода
+                    startActivity(Intent(this@SignUpActivity, CreateCodeActivity::class.java))
+                    finish()
+                } else {
+                    Toast.makeText(this@SignUpActivity, "Ошибка регистрации", Toast.LENGTH_SHORT).show()
+                }
             } catch (e: Exception) {
                 Toast.makeText(this@SignUpActivity, "Ошибка регистрации", Toast.LENGTH_SHORT).show()
             }

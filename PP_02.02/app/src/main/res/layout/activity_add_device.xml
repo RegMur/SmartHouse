@@ -69,8 +69,7 @@
         <Spinner
             android:id="@+id/room_spinner"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:prompt="Выберите комнату" />
+            android:layout_height="50dp"/>
     </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
